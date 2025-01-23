@@ -39,7 +39,7 @@ const UrlInput = ({ urls, onSelect }) => {
     setSavedUrls(updatedUrlList);
     onSelect(value);
   };
-  const renderDropdown = () => {
+  const RenderDropdown = () => {
     const dropdownOptions = urlList.map((url) => ({
       key: url,
       value: url,
@@ -65,7 +65,9 @@ const UrlInput = ({ urls, onSelect }) => {
     );
   };
 
-  return <div className="url-input-container">{renderDropdown()}</div>;
+  return <div className="url-input-container">
+    <RenderDropdown/>
+    </div>;
 };
 
 export default UrlInput;
